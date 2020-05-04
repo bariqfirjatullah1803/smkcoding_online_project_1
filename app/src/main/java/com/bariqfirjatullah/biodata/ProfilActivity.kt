@@ -17,7 +17,14 @@ class ProfilActivity : AppCompatActivity() {
 
         btnEditName.setOnClickListener { navigasiKeEditProfil() }
         btnCall.setOnClickListener { dialPhoneNumber(txtTelp.text.toString()) }
+        btnAbout.setOnClickListener { goToAboutActivity() }
     }
+
+    private fun goToAboutActivity() {
+        val intent = Intent(this, AboutActivity::class.java)
+        startActivity(intent)
+    }
+
     private fun ambilData(){
         val bundle = intent.extras
 
